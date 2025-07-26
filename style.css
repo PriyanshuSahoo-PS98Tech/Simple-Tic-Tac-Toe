@@ -1,0 +1,168 @@
+/* General page styling */
+body {
+  margin: 0;
+  /* Remove default margin */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Set font */
+  background: linear-gradient(135deg, #2e2e2e, #000000);
+  /* Dark gradient background */
+  height: 100vh;
+  /* Full height */
+  display: flex;
+  /* Use flexbox for alignment */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+/* Container for the game */
+.container {
+  text-align: center;
+  /* Center text */
+  color: white;
+  /* White text color */
+}
+
+/* Game title with animation */
+.title {
+  font-size: 3em;
+  /* Large font size */
+  margin-bottom: 20px;
+  /* Space below the title */
+  animation: pulse 2s infinite ease-in-out;
+  /* Pulsing effect */
+  color: #00ffcc;
+  /* Light cyan color */
+}
+
+/* Pulse animation for the title */
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    color: #00ffcc;
+  }
+
+  /* Normal size */
+  50% {
+    transform: scale(1.1);
+    color: #00ffff;
+  }
+
+  /* Slightly bigger */
+}
+
+/* Tic-Tac-Toe board grid */
+.board {
+  display: grid;
+  /* Use grid layout */
+  grid-template-columns: repeat(3, 100px);
+  /* 3x3 layout */
+  gap: 10px;
+  /* Space between cells */
+  justify-content: center;
+  /* Center board */
+}
+
+/* Individual cells in the board */
+.cell {
+  width: 100px;
+  /* Cell width */
+  height: 100px;
+  /* Cell height */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* Semi-transparent background */
+  border: 2px solid #00ffff;
+  /* Cyan border */
+  font-size: 2.5em;
+  /* Large font */
+  color: #00ffff;
+  /* Default text color */
+  display: flex;
+  /* Flexbox for centering */
+  justify-content: center;
+  /* Center text horizontally */
+  align-items: center;
+  /* Center text vertically */
+  cursor: pointer;
+  /* Show pointer on hover */
+  transition: transform 0.2s ease;
+  /* Smooth scaling effect */
+}
+
+/* Hover effect for cells */
+.cell:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+  /* Slightly brighter background */
+  transform: scale(1.05);
+  /* Slight enlarge effect */
+}
+
+/* Styling for 'X' and 'O' moves */
+.cell.x {
+  color: #ff4e4e;
+  /* Red for 'X' */
+  animation: pop 0.3s ease-out;
+  /* Pop animation */
+}
+
+.cell.o {
+  color: #4eff4e;
+  /* Green for 'O' */
+  animation: pop 0.3s ease-out;
+  /* Pop animation */
+}
+
+/* Pop animation when a mark is placed */
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  /* Start small and hidden */
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Fully visible */
+}
+
+/* Status message */
+.status {
+  margin: 20px 0;
+  /* Space above and below */
+  font-size: 1.5em;
+  /* Slightly large text */
+  color: #00ffcc;
+  /* Light cyan color */
+}
+
+/* Reset button */
+.reset {
+  padding: 10px 20px;
+  /* Comfortable padding */
+  font-size: 1em;
+  /* Normal text size */
+  background-color: #00ffcc;
+  /* Button background */
+  border: none;
+  /* No border */
+  color: black;
+  /* Text color */
+  cursor: pointer;
+  /* Show pointer */
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+/* Hover effect for reset button */
+.reset:hover {
+  background-color: #00dddd;
+  /* Lighter cyan on hover */
+}

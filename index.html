@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character encoding to UTF-8 for proper text rendering -->
+  <meta charset="UTF-8" />
+
+  <!-- Ensure proper scaling and responsiveness on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title displayed on the browser tab -->
+  <title>Tic Tac Toe</title>
+
+  <!-- Link to the external CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container"> <!-- Main container holding all elements -->
+    <h1 class="title">Tic Tac Toe</h1> <!-- Game title with animation -->
+
+    <!-- The game board where players interact -->
+    <div class="board" id="board"></div>
+
+    <!-- Displays the game status (e.g., current turn, winner, draw) -->
+    <div class="status" id="status"></div>
+
+    <!-- Reset button to restart the game -->
+    <button class="reset" onclick="resetGame()">Reset Game</button>
+  </div>
+
+  <!-- Include the external JavaScript file for game logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
